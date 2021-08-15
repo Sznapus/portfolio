@@ -7,12 +7,12 @@
 :root {
     --big-xll: 36px;
     --big: 24px;
-    --medium: 14px;
+    --medium: 18px;
     --small: 10px;
     --white: #F2F2F2;
-    // --grey: ;
-    // --grey-dark: ;
-    // --blue: ;
+    --grey: #989898;
+    --grey-dark: #3C3939;
+    --blue: #79D1EE;
     // --blue-dark: ;
     font-family: Arial, Helvetica, sans-serif;
     color: #F2F2F2;
@@ -31,13 +31,13 @@
 }
 .parent__size {
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
 }
 
 .text {
-    display: block;
-    padding: 8px;
+    padding: 4px;
     margin: 8px;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 .header {
@@ -72,6 +72,7 @@
     width: 50%;
     background-color: rgba(0,0,0,.95);
     transition: .5s;
+    z-index: 888;
     &__list{
         flex-direction: column;
         justify-content: space-around;
@@ -91,7 +92,7 @@
     border: 0;
     background-color: transparent;
     cursor: pointer;
-    z-index: 9999;
+    z-index: 999;
     &:focus {
       & > .hamburger__container {
         box-shadow: 0 0 3px 3px #51a7e8;
@@ -112,6 +113,7 @@
     width: 35px;
     height: 3px;
     background-color: white;
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.60);
     transition: transform .22s ease-in-out;
     &:before, &:after {
       display: block;
@@ -119,6 +121,7 @@
       width: 35px;
       height: 3px;
       background-color: white;
+      box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.60);
       content: '';
     }
     &:before {
@@ -152,5 +155,42 @@
   .hamburger, .hamburger__container {
     &:focus {
       outline: none;
+    }
+  }
+
+  .about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    background-color: var(--white);
+    .wrapp__heading{
+        display: flex;
+        align-content: center;
+        justify-content: center;
+        &--text {
+            position: absolute;
+            margin: 24px 0 0 0;
+            text-align: center;
+            color: var(--grey-dark);
+            z-index: 9;
+            &-color {
+                position: absolute;
+                top: 16px;
+                left: 52%;
+                padding: 4px 16px;
+                color: var(--white);
+                background-color: var(--blue);
+                z-index: -1;
+            }
+        }
+      }
+    &__text {
+        width: 80%;
+        color: var(--grey);
+        font-size: var(--medium);
+        text-align: center;
+        background-color: white;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     }
   }
