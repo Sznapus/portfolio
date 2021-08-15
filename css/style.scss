@@ -37,6 +37,7 @@
 .text {
     display: block;
     padding: 8px;
+    margin: 8px;
 }
 
 .header {
@@ -57,3 +58,99 @@
         margin: 0 0 48px 0;
     }
 }
+
+.navigation {
+    display: flex;
+    position: fixed;
+    top: 0;
+    right: 0;
+    transform: translate(100%);
+    align-items: center;
+    justify-content: space-around;
+    padding: 0 50px;
+    height: 100vh;
+    width: 50%;
+    background-color: rgba(0,0,0,.95);
+    transition: .5s;
+    &__list{
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }    
+}
+.navigation.active{
+    transform: translate(0);
+}
+.hamburger {
+    display: block;
+    position: fixed;
+    top: 0;
+    right: 0;
+    margin: 20px 20px;
+    padding: 0;
+    border: 0;
+    background-color: transparent;
+    cursor: pointer;
+    z-index: 9999;
+    &:focus {
+      & > .hamburger__container {
+        box-shadow: 0 0 3px 3px #51a7e8;
+      }
+    }
+  }
+  
+  .hamburger__container {
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 35px;
+    height: 30px;
+  }
+  
+  .hamburger__bars {
+    position: absolute;
+    width: 35px;
+    height: 3px;
+    background-color: white;
+    transition: transform .22s ease-in-out;
+    &:before, &:after {
+      display: block;
+      position: absolute;
+      width: 35px;
+      height: 3px;
+      background-color: white;
+      content: '';
+    }
+    &:before {
+      top: -12px;
+      transition: top .1s .25s ease-in, transform .22s ease-in-out;
+    }
+    &:after {
+      bottom: -12px;
+      transition: bottom .1s .25s ease-in, 
+        transform .22s ease-in-out;
+    }
+  }
+  
+  .hamburger--active {
+    .hamburger__bars {
+      transform: rotate(225deg);
+      transition: transform .22s .12s ease-in-out;
+      &:before {
+        top: 0;
+        transition: top 100ms ease-out;
+      }
+      &:after {
+        bottom: 0;
+        transform: rotate(-90deg);
+        transition: bottom 100ms ease-out, 
+          transform .22s .12s ease-in-out;
+      }
+    }
+  }
+  
+  .hamburger, .hamburger__container {
+    &:focus {
+      outline: none;
+    }
+  }
