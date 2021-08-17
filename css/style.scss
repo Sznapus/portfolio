@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+// font-family: 'Poppins', sans-serif;
+
 * {
     margin: 0;
     padding: 0;
@@ -7,40 +10,31 @@
 :root {
     --big-xll: 36px;
     --big: 24px;
-    --medium: 18px;
+    --medium: 14px;
     --small: 10px;
     --white: #F2F2F2;
     --grey: #989898;
     --grey-dark: #3C3939;
-    --blue: #79D1EE;
-    // --blue-dark: ;
-    font-family: Arial, Helvetica, sans-serif;
+    --blue: #58A7C0;
+    --blue-dark: #207A97;
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: 1px;
     color: #F2F2F2;
 }
 
 .font__title {
     font-size: var(--big);
 }
-.position__relative {
-    position: relative;
-    overflow: hidden;
-}
-.position__absolute {
-    position: absolute;
-    overflow: hidden;
-}
+
 .parent__size {
     width: 100%;
     min-height: 100vh;
 }
 
-.text {
-    padding: 4px;
-    margin: 8px;
-    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-}
-
-.header {
+.wrapper {
+  width: 100vw;
+  background: #3C3939;
+  .header {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -49,17 +43,17 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 30% 50%;
-    &__name {
+      &__name {
         font-size: var(--big-xll);
         writing-mode: vertical-rl;
-    }
-    &__work {
+      }
+      &__work {
         align-self: center;
         margin: 0 0 48px 0;
-    }
-}
+      }
+  }
 
-.navigation {
+  .navigation {
     display: flex;
     position: fixed;
     top: 0;
@@ -73,16 +67,16 @@
     background-color: rgba(0,0,0,.95);
     transition: .5s;
     z-index: 888;
-    &__list{
+      &__list{
         flex-direction: column;
         justify-content: space-around;
         align-items: center;
-    }    
-}
-.navigation.active{
+      }    
+  }
+  .navigation.active{
     transform: translate(0);
-}
-.hamburger {
+  }
+  .hamburger {
     display: block;
     position: fixed;
     top: 0;
@@ -158,39 +152,4 @@
     }
   }
 
-  .about {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-    background-color: var(--white);
-    .wrapp__heading{
-        display: flex;
-        align-content: center;
-        justify-content: center;
-        &--text {
-            position: absolute;
-            margin: 24px 0 0 0;
-            text-align: center;
-            color: var(--grey-dark);
-            z-index: 9;
-            &-color {
-                position: absolute;
-                top: 16px;
-                left: 52%;
-                padding: 4px 16px;
-                color: var(--white);
-                background-color: var(--blue);
-                z-index: -1;
-            }
-        }
-      }
-    &__text {
-        width: 80%;
-        color: var(--grey);
-        font-size: var(--medium);
-        text-align: center;
-        background-color: white;
-        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    }
-  }
+}
