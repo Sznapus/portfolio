@@ -21,13 +21,33 @@
   color: #F2F2F2;
 }
 
-.font__title {
+.font-title {
   font-size: var(--big);
 }
 
-.parent__size {
+.parent-size {
   width: 100%;
   min-height: 100vh;
+}
+
+.flex-column {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.box-shadow {
+  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 .wrapper {
@@ -206,5 +226,85 @@
 
 .wrapper .hamburger:focus, .wrapper .hamburger__container:focus {
   outline: none;
+}
+
+.about {
+  background-color: var(--white);
+}
+
+.about__heading--top {
+  color: var(--grey-dark);
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  z-index: 1;
+}
+
+.about__heading--bottom {
+  padding: 0 16px;
+  background-color: var(--blue-dark);
+}
+
+.about__text {
+  width: 80%;
+  text-align: center;
+  padding: 8px 16px;
+  font-size: var(--medium);
+  background-color: #fff;
+  color: var(--grey-dark);
+}
+
+.technologies {
+  background-color: var(--grey-dark);
+}
+
+.technologies__heading--top {
+  padding: 0 16px;
+  background-color: var(--blue-dark);
+}
+
+.technologies__heading--bottom {
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  z-index: 1;
+}
+
+.technologies__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: var(--small);
+  color: var(--grey-dark);
+}
+
+.technologies__container--item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 8px;
+  width: 25%;
+  height: 15vh;
+  border-radius: 5px;
+  background-color: var(--blue-dark);
+}
+
+.technologies__container--item img {
+  -webkit-filter: color;
+          filter: color;
+  width: 50%;
+  height: auto;
 }
 /*# sourceMappingURL=style.css.map */
