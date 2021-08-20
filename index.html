@@ -5,11 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Robert Sznapka</title>
+    <script src="https://kit.fontawesome.com/41766180e0.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
     <div class="wrapper">
-        <header class="header flex-column position-relative parent-size">
+        <header class="header flex-column parent-size">
             <h1 class="header__name font-title text">Robert Sznapka</h1>
             <h1 class="header__work font-title text">Front-end Developer</h1>
         </header>
@@ -38,55 +39,93 @@
             </ul>
         </nav>
         <main>
-            <section class="about position-relative parent-size flex-column">
+            <section class="about parent-size flex-column">
                 <h2 class="about__heading flex-column"> 
                     <span class="about__heading--top">About</span>
                     <span class="about__heading--bottom">Me</span>
                 </h2>
-                <p class="about__text box-shadow">
+                <p class="about__text">
                 Hello, I’m Robert. I graduated from the IT technical school with a specialization computer graphics and multimedia. In 2020 i started learning programming. I would like to work as a Front-end Developer and learn from the best. I've always been interested in technology. My hobby is gaming and traveling with my loved ones.
                 Programming is my passion.</p>
-            </section><section class="technologies position-relative parent-size flex-column">
+            </section>
+            <section class="technologies parent-size flex-column">
                 <h2 class="technologies__heading flex-column"> 
                     <span class="technologies__heading--top">Used</span>
                     <span class="technologies__heading--bottom">Technologies</span>
                 </h2>
                 <div class="technologies__container">
                     <div class="technologies__container--item">
-                        <img src="./icon/html5-line.svg" alt="html5">
+                        <img class="technologies__container--item-img" src="./img/icon/html5.png" alt="html5">
                         <p>HTML5</p>
                     </div>
                     <div class="technologies__container--item">
-                        <img src="./icon/css3-alt-brands.svg" alt="css3">
+                        <img class="technologies__container--item-img" src="./img/icon/css3.png" alt="css3">
                         <p>CSS3</p>
                     </div>
                     <div class="technologies__container--item">
-                        <img src="./icon/js-brands.svg" alt="javascript">
+                        <img class="technologies__container--item-img" src="./img/icon/js.png" alt="javascript">
                         <p>JAVASCRIPT</p>
                     </div>
                     <div class="technologies__container--item">
-                        <img src="./icon/react-brands.svg" alt="react">
+                        <img class="technologies__container--item-img" src="./img/icon/react.png" alt="react">
                         <p>REACT</p>
                     </div>
                     <div class="technologies__container--item">
-                        <img src="./icon/sass-brands.svg" alt="sass">
+                        <img class="technologies__container--item-img" src="./img/icon/sass.png" alt="sass">
                         <p>SASS</p>
                     </div>
                     <div class="technologies__container--item">
-                        <img src="./icon/cross-platform.svg" alt="rwd">
+                        <img class="technologies__container--item-img" src="./img/icon/cross.png" alt="rwd">
                         <p>RWD</p>
                     </div>
                     <div class="technologies__container--item">
-                        <img src="./icon/git-alt-brands.svg" alt="git">
+                        <img src="./img/icon/git.png" alt="git">
                         <p>GIT</p>
                     </div>
                 </div>
             </section>
-            <!-- <section class="technologies position__relative parent__size">
-                    <div class="wrapp__header">
-                    <h2 class="wrapp__header--text text">Used <span class="wrapp__header--text-color text">Technology</span></h2>
-                </div>
-            </section> -->
+            <section class="projects parent-size flex-column">
+                <h2 class="projects__heading flex-column"> 
+                    <span class="projects__heading--top">My</span>
+                    <span class="projects__heading--bottom">Projects</span>
+                </h2>
+                <article class="projects__article">
+                    <h2 class="projects__article--heading">Portfolio</h2>
+                    <div class="projects__article--content">
+                        <div class="projects__article--content-text">
+                            <p>HTML, SCSS, JS</p>
+                            <a href=""><i class="fab fa-github"></i></a>
+                        </div>
+                        <div class="projects__article--content-img">
+                            <img src="./img/project3 (Telefon).jpg" alt="portfolio">
+                        </div>
+                    </div>
+                </article>
+                <article class="projects__article">
+                    <h2 class="projects__article--heading">Skład Jakubiec</h2>
+                    <div class="projects__article--content">
+                        <div class="projects__article--content-text">
+                            <p>HTML, CSS, JS</p>
+                            <a href=""><i class="fab fa-github"></i></a>
+                        </div>
+                        <div class="projects__article--content-img">
+                            <img src="./img/project1_img (Telefon).jpg" alt="portfolio">
+                        </div>
+                    </div>
+                </article>
+                <article class="projects__article">
+                    <h2 class="projects__article--heading">Portfolio</h2>
+                    <div class="projects__article--content">
+                        <div class="projects__article--content-text">
+                            <p>React, Styled-Components</p>
+                            <a href=""><i class="fab fa-github"></i></a>
+                        </div>
+                        <div class="projects__article--content-img">
+                            <img src="./img/project2_img (Telefon).jpg" alt="todoapp">
+                        </div>
+                    </div>
+                </article>
+            </section>
         </main>
     </div>
     <script src="/script/main.js"></script>

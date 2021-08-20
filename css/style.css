@@ -45,11 +45,6 @@
       justify-content: space-around;
 }
 
-.box-shadow {
-  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-}
-
 .wrapper {
   width: 100vw;
   background: #3C3939;
@@ -301,10 +296,96 @@
   background-color: var(--blue-dark);
 }
 
-.technologies__container--item img {
-  -webkit-filter: color;
-          filter: color;
+.technologies__container--item-img {
   width: 50%;
   height: auto;
+}
+
+.projects {
+  background-color: var(--white);
+}
+
+.projects__heading--top {
+  color: var(--grey-dark);
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  z-index: 1;
+}
+
+.projects__heading--bottom {
+  padding: 0 16px;
+  background-color: var(--blue-dark);
+}
+
+.projects__article {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 32px 0;
+  width: 90%;
+  height: 40%;
+  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.projects__article--heading {
+  position: absolute;
+  top: -14px;
+  left: -8px;
+  padding: 4px 8px;
+  font-size: var(--medium);
+  background-color: var(--blue-dark);
+}
+
+.projects__article--content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  padding: 16px;
+}
+
+.projects__article--content p {
+  text-align: center;
+  color: var(--grey-dark);
+}
+
+.projects__article--content a {
+  display: block;
+  width: 100%;
+  text-align: center;
+  color: var(--blue-dark);
+}
+
+.projects__article--content a i {
+  margin: 8px 8px;
+  font-size: 24px;
+}
+
+.projects__article--content-img {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  width: 70%;
+  height: 70%;
+  padding: 16px;
+  overflow: hidden;
+}
+
+.projects__article--content-img img {
+  border-radius: 5px;
+  width: 100%;
+  height: auto;
+  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 /*# sourceMappingURL=style.css.map */
