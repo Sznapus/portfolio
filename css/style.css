@@ -223,19 +223,32 @@
   outline: none;
 }
 
-.about {
-  background-color: var(--white);
+.section__heading {
+  margin: 32px 0;
 }
 
-.about__heading--top {
+.section__heading--top {
   color: var(--grey-dark);
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   z-index: 1;
 }
 
-.about__heading--bottom {
+.section__heading--bottom {
   padding: 0 16px;
   background-color: var(--blue-dark);
+}
+
+.section__heading:nth-child(1)--top {
+  color: var(--white);
+  background-color: var(--blue-dark);
+}
+
+.section__heading:nth-child(1)--bottom {
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.about {
+  background-color: var(--white);
 }
 
 .about__text {
@@ -249,16 +262,6 @@
 
 .technologies {
   background-color: var(--grey-dark);
-}
-
-.technologies__heading--top {
-  padding: 0 16px;
-  background-color: var(--blue-dark);
-}
-
-.technologies__heading--bottom {
-  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  z-index: 1;
 }
 
 .technologies__container {
@@ -303,17 +306,6 @@
 
 .projects {
   background-color: var(--white);
-}
-
-.projects__heading--top {
-  color: var(--grey-dark);
-  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  z-index: 1;
-}
-
-.projects__heading--bottom {
-  padding: 0 16px;
-  background-color: var(--blue-dark);
 }
 
 .projects__article {
