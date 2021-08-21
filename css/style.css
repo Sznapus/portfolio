@@ -45,6 +45,17 @@
       justify-content: space-around;
 }
 
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+a, a:hover, a:focus, a:active {
+  text-decoration: none;
+  color: inherit;
+}
+
 .wrapper {
   width: 100vw;
   background: #3C3939;
@@ -64,13 +75,13 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  background-image: url(/img/photo-me-big.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 30% 50%;
 }
 
 .wrapper .header__name {
+  margin: 16px;
   font-size: var(--big-xll);
   -webkit-writing-mode: vertical-rl;
       -ms-writing-mode: tb-rl;
@@ -223,27 +234,42 @@
   outline: none;
 }
 
-.section__heading {
+section {
   margin: 32px 0;
 }
 
-.section__heading--top {
-  color: var(--grey-dark);
-  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+section .section__heading {
+  margin: 32px 0;
+}
+
+section .section__heading--top {
   z-index: 1;
 }
 
-.section__heading--bottom {
+section .section__heading--bottom {
+  padding: 0 16px;
+}
+
+section:nth-child(odd) .section__heading {
+  margin: 32px 0;
+}
+
+section:nth-child(odd) .section__heading--top {
+  color: var(--grey-dark);
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+section:nth-child(odd) .section__heading--bottom {
   padding: 0 16px;
   background-color: var(--blue-dark);
 }
 
-.section__heading:nth-child(1)--top {
+section:nth-child(even) .section__heading--top {
   color: var(--white);
   background-color: var(--blue-dark);
 }
 
-.section__heading:nth-child(1)--bottom {
+section:nth-child(even) .section__heading--bottom {
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
