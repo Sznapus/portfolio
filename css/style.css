@@ -349,9 +349,8 @@ section:nth-child(4) .section__heading--bottom {
   background-color: var(--blue-dark);
 }
 
-.technologies__container--item-img {
-  width: 50%;
-  height: auto;
+.technologies__container--item .icon {
+  fill: var(--white);
 }
 
 .projects {

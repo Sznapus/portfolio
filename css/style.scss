@@ -267,10 +267,10 @@ section {
       height: 15vh;
       border-radius: 5px;
       background-color: var(--blue-dark);
-      &-img {
-        width: 50%;
-        height: auto;
+      .icon {
+        fill: var(--white);
       }
+      
     }
   }
 }
