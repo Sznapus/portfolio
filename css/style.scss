@@ -199,6 +199,7 @@ a, a:hover, a:focus, a:active {
 section {
   .section__heading {
     margin: 32px 0;
+    font-weight: normal;
   }
   &:nth-child(1) {
     .section__heading {
