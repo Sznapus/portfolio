@@ -168,16 +168,15 @@ a, a:hover, a:focus, a:active {
     align-items: flex-start;
     justify-content: space-between;
     overflow: hidden;
+    z-index: 1;
       &__picture {
         position: absolute;
         top: 50%;
         left: 50%;
         width: auto;
-        height: 40%;
+        height: 100vh;
         border-radius: 5px;
-        transform: translate(-50%, -50%);
-        filter: grayscale(100%);
-        box-shadow: 0px 0px 50px rgba(0, 0, 0, 3);
+        transform: translate(-46%, -50%);
       }
       &__name {
         margin: 16px;
@@ -189,51 +188,6 @@ a, a:hover, a:focus, a:active {
         align-self: center;
         margin: 0 0 48px 0;
         z-index: 1;
-      }
-      .elipse {
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 50px;
-        height: 50px;
-        border: 2px solid#989898;
-        border-radius: 50%;
-        animation: 15s linear infinite fly;
-      }
-      @keyframes fly {
-        0% {
-          transform: translate(0, 0);
-        }
-        10% {
-          transform: translate(30%, 10%);
-        }
-        20% {
-          transform: translate(5%, 20%);
-        }
-        30% {
-          transform: translate(40%, 30%);
-        }
-        40% {
-          transform: translate(6%, 40%);
-        }
-        50% {
-          transform: translate(30%, 50%);
-        }
-        60% {
-          transform: translate(15%, 60%);
-        }
-        70% {
-          transform: translate(60%, 70%);
-        }
-        80% {
-          transform: translate(2%, 80%);
-        }
-        90% {
-          transform: translate(30%, 90%);
-        }
-        100% {
-          transform: translate(5%, 100%);
-        }
       }
   }
   
@@ -303,6 +257,7 @@ section {
 
 .about {
   background-color: var(--white);
+  overflow: hidden;
   &__text {
     width: 80%;
     text-align: left;
@@ -310,7 +265,26 @@ section {
     font-size: var(--medium);
     background-color: #fff;
     color: var(--grey-dark);
+    z-index: 1;
   }
+  .elipse {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 50px;
+        height: 50px;
+        border: 2px solid var(--blue);
+        border-radius: 50%;
+        animation: 10s linear infinite up;
+      }
+      @keyframes up {
+        0% {
+          transform: translate(0, 1500%);
+        }
+        100% {
+          transform: translate(0, 0);
+        }
+      }
 }
 
 .technologies {
