@@ -27,6 +27,9 @@
     font-size: var(--big);
     font-weight: normal;
 }
+h2 {
+  font-weight: normal;
+}
 
 .parent-size {
     width: 100%;
@@ -171,17 +174,10 @@ a, a:hover, a:focus, a:active {
         left: 50%;
         width: auto;
         height: 40%;
+        border-radius: 5px;
         transform: translate(-50%, -50%);
-        // 
-        object-fit: cover;
-        filter: grayscale(100%) contrast(100%);
-        box-shadow: 10px 15px 25px 0 rgba(0,0,0,.2);
-        display: block;
-        transition: all .5s cubic-bezier(0.645, 0.045, 0.355, 1);
-        margin-top: -10px;
-        &:hover {
-          box-shadow: 1px 1px 10px 0 rgba(0,0,0,.1);
-        }
+        filter: grayscale(100%);
+        box-shadow: 0px 0px 50px rgba(0, 0, 0, 3);
       }
       &__name {
         margin: 16px;
@@ -199,7 +195,6 @@ a, a:hover, a:focus, a:active {
 section {
   .section__heading {
     margin: 32px 0;
-    font-weight: normal;
   }
   &:nth-child(1) {
     .section__heading {
