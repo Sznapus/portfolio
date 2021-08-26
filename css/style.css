@@ -228,9 +228,24 @@ a, a:hover, a:focus, a:active {
   top: 50%;
   left: 50%;
   width: auto;
-  height: 90%;
+  height: 40%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-filter: grayscale(100%) contrast(100%);
+          filter: grayscale(100%) contrast(100%);
+  -webkit-box-shadow: 10px 15px 25px 0 rgba(0, 0, 0, 0.2);
+          box-shadow: 10px 15px 25px 0 rgba(0, 0, 0, 0.2);
+  display: block;
+  -webkit-transition: all 0.5s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition: all 0.5s cubic-bezier(0.645, 0.045, 0.355, 1);
+  margin-top: -10px;
+}
+
+.header__picture:hover {
+  -webkit-box-shadow: 1px 1px 10px 0 rgba(0, 0, 0, 0.1);
+          box-shadow: 1px 1px 10px 0 rgba(0, 0, 0, 0.1);
 }
 
 .header__name {

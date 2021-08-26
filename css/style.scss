@@ -170,9 +170,18 @@ a, a:hover, a:focus, a:active {
         top: 50%;
         left: 50%;
         width: auto;
-        height: 90%;
-        // zaczac tutaj!!!!!!!!
+        height: 40%;
         transform: translate(-50%, -50%);
+        // 
+        object-fit: cover;
+        filter: grayscale(100%) contrast(100%);
+        box-shadow: 10px 15px 25px 0 rgba(0,0,0,.2);
+        display: block;
+        transition: all .5s cubic-bezier(0.645, 0.045, 0.355, 1);
+        margin-top: -10px;
+        &:hover {
+          box-shadow: 1px 1px 10px 0 rgba(0,0,0,.1);
+        }
       }
       &__name {
         margin: 16px;
