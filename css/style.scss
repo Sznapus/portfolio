@@ -269,8 +269,11 @@ section {
     color: var(--grey-dark);
     z-index: 1;
   }
-  .square {
+  .background-detail {
     position: absolute;
+    opacity: 0.5;
+  }
+  .square {
     top: 80%;
     left: 70%;
     width: 70px;
@@ -284,13 +287,11 @@ section {
     }
   }
   .line {
-    position: absolute;
     top: 85%;
     left: 0;
     width: 45%;
   }
   .elipse {
-    position: absolute;
     top: -6%;
     left: 80%;
     width: 120px;

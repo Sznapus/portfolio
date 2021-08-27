@@ -335,8 +335,12 @@ section:nth-child(4) .section__heading--bottom {
   z-index: 1;
 }
 
-.about .square {
+.about .background-detail {
   position: absolute;
+  opacity: 0.5;
+}
+
+.about .square {
   top: 80%;
   left: 70%;
   width: 70px;
@@ -361,14 +365,12 @@ section:nth-child(4) .section__heading--bottom {
 }
 
 .about .line {
-  position: absolute;
   top: 85%;
   left: 0;
   width: 45%;
 }
 
 .about .elipse {
-  position: absolute;
   top: -6%;
   left: 80%;
   width: 120px;
