@@ -258,6 +258,7 @@ section {
 
 .about {
   background-color: var(--white);
+  position: relative;
   overflow: hidden;
   &__text {
     width: 80%;
@@ -267,6 +268,35 @@ section {
     background-color: #fff;
     color: var(--grey-dark);
     z-index: 1;
+  }
+  .square {
+    position: absolute;
+    top: 80%;
+    left: 70%;
+    width: 70px;
+    height: 70px;
+    border: 3px solid var(--blue);
+    animation: spin-right 10s linear infinite;
+    @keyframes spin-right {
+      100% {
+        transform: rotate(360deg)
+      }
+    }
+  }
+  .line {
+    position: absolute;
+    top: 85%;
+    left: 0;
+    width: 45%;
+  }
+  .elipse {
+    position: absolute;
+    top: -6%;
+    left: 80%;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 3px solid var(--blue);
   }
 }
 
