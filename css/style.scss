@@ -32,8 +32,9 @@ h2 {
 }
 
 .parent-size {
-    width: 100%;
+    width: 100vw;
     min-height: 100vh;
+    overflow: hidden;
 }
 .flex-column {
   display: flex;
@@ -55,6 +56,7 @@ a, a:hover, a:focus, a:active {
 .wrapper {
   width: 100vw;
   background: #3C3939;
+  overflow: hidden;
   .navigation {
     display: flex;
     position: fixed;
@@ -168,7 +170,6 @@ a, a:hover, a:focus, a:active {
     align-items: flex-start;
     justify-content: space-between;
     overflow: hidden;
-    z-index: 1;
       &__picture {
         position: absolute;
         top: 50%;
@@ -267,24 +268,6 @@ section {
     color: var(--grey-dark);
     z-index: 1;
   }
-  .elipse {
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 50px;
-        height: 50px;
-        border: 2px solid var(--blue);
-        border-radius: 50%;
-        animation: 10s linear infinite up;
-      }
-      @keyframes up {
-        0% {
-          transform: translate(0, 1500%);
-        }
-        100% {
-          transform: translate(0, 0);
-        }
-      }
 }
 
 .technologies {
@@ -392,12 +375,6 @@ section {
         padding: 16px;
         overflow: hidden;
         flex: 1;
-        // img {
-        //   border-radius: 5px;
-        //   width: 100%;
-        //   height: auto;
-        //   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-        // }
       }
     }
   }

@@ -32,8 +32,9 @@ h2 {
 }
 
 .parent-size {
-  width: 100%;
+  width: 100vw;
   min-height: 100vh;
+  overflow: hidden;
 }
 
 .flex-column {
@@ -63,6 +64,7 @@ a, a:hover, a:focus, a:active {
 .wrapper {
   width: 100vw;
   background: #3C3939;
+  overflow: hidden;
 }
 
 .wrapper .navigation {
@@ -225,7 +227,6 @@ a, a:hover, a:focus, a:active {
       -ms-flex-pack: justify;
           justify-content: space-between;
   overflow: hidden;
-  z-index: 1;
 }
 
 .header__picture {
@@ -331,40 +332,6 @@ section:nth-child(4) .section__heading--bottom {
   background-color: #fff;
   color: var(--grey-dark);
   z-index: 1;
-}
-
-.about .elipse {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 50px;
-  height: 50px;
-  border: 2px solid var(--blue);
-  border-radius: 50%;
-  -webkit-animation: 10s linear infinite up;
-          animation: 10s linear infinite up;
-}
-
-@-webkit-keyframes up {
-  0% {
-    -webkit-transform: translate(0, 1500%);
-            transform: translate(0, 1500%);
-  }
-  100% {
-    -webkit-transform: translate(0, 0);
-            transform: translate(0, 0);
-  }
-}
-
-@keyframes up {
-  0% {
-    -webkit-transform: translate(0, 1500%);
-            transform: translate(0, 1500%);
-  }
-  100% {
-    -webkit-transform: translate(0, 0);
-            transform: translate(0, 0);
-  }
 }
 
 .technologies {
