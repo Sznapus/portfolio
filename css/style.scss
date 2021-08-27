@@ -53,6 +53,18 @@ a, a:hover, a:focus, a:active {
   color: inherit;
 }
 
+@keyframes letterSpacing {
+  10% {
+    letter-spacing: 4px;
+  }
+  90% {
+    letter-spacing: 4px;
+  }
+  100%{
+    letter-spacing: 0px;
+  }  
+}
+
 .wrapper {
   width: 100vw;
   background: #3C3939;
@@ -184,11 +196,15 @@ a, a:hover, a:focus, a:active {
         font-size: var(--big-xll);
         writing-mode: vertical-rl;
         z-index: 1;
+        letter-spacing: 0px;
+        cursor: default;
+        animation: letterSpacing 12s ease-in-out infinite;
       }
       &__work {
         align-self: center;
         margin: 0 0 48px 0;
         z-index: 1;
+        animation: letterSpacing 12s ease-in-out infinite;
       }
   }
   
