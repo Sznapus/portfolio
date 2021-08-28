@@ -284,11 +284,14 @@ section {
     background-color: #fff;
     color: var(--grey-dark);
     z-index: 1;
+    &:nth-child(odd) {
+      margin: 32px 0 0 0;
+    }
   }
-  // .background-detail {
-  //   position: absolute;
-  //   opacity: 0.5;
-  // }
+  .background-detail {
+    position: absolute;
+    opacity: 0.5;
+  }
   .square {
     top: 80%;
     left: 70%;
@@ -314,6 +317,22 @@ section {
     height: 120px;
     border-radius: 50%;
     border: 3px solid var(--blue);
+    &:after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: -200%;
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      border: 3px solid var(--blue);
+      animation: slide 10s linear infinite;
+      @keyframes slide{
+      100% {
+        transform: translate(20%, 400%)
+      }
+    }
+      }
   }
 }
 

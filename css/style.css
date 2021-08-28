@@ -365,6 +365,10 @@ section:nth-child(4) .section__heading--bottom {
   z-index: 1;
 }
 
+.about__text:nth-child(odd) {
+  margin: 32px 0 0 0;
+}
+
 .about .background-detail {
   position: absolute;
   opacity: 0.5;
@@ -407,6 +411,33 @@ section:nth-child(4) .section__heading--bottom {
   height: 120px;
   border-radius: 50%;
   border: 3px solid var(--blue);
+}
+
+.about .elipse:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: -200%;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 3px solid var(--blue);
+  -webkit-animation: slide 10s linear infinite;
+          animation: slide 10s linear infinite;
+}
+
+@-webkit-keyframes slide {
+  100% {
+    -webkit-transform: translate(20%, 400%);
+            transform: translate(20%, 400%);
+  }
+}
+
+@keyframes slide {
+  100% {
+    -webkit-transform: translate(20%, 400%);
+            transform: translate(20%, 400%);
+  }
 }
 
 .technologies {
