@@ -14,6 +14,7 @@
     --medium: 14px;
     --small: 10px;
     --white: #F2F2F2;
+    --black: #020202;
     --grey: #989898;
     --grey-dark: #3C3939;
     --blue: #58A7C0;
@@ -97,11 +98,6 @@ a, a:hover, a:focus, a:active {
     background-color: transparent;
     cursor: pointer;
     z-index: 999;
-    &:focus {
-      & > .hamburger__container {
-        box-shadow: 0 0 3px 3px #51a7e8;
-      }
-    }
   }
   
   .hamburger__container {
@@ -169,52 +165,53 @@ a, a:hover, a:focus, a:active {
     flex-direction: column;
     align-items: flex-start;
     justify-content: space-between;
-    background-color: #262424;
     overflow: hidden;
-      &__picture {
-        position: absolute;
-        top: 0;
-        right: 0;
-        width: auto;
-        height: 100vh;
-        border-radius: 5px;
-        opacity: .7;
-        transform: translateX(5%);
-        animation: light 5s ease-in infinite;
-        @keyframes light {
-          0% {
-            mix-blend-mode: soft-light;
-          }
-          10% {
-            mix-blend-mode: normal;
-          }
-          15% {
-            mix-blend-mode: soft-light;
-          }
-          40% {
-            mix-blend-mode: normal;
-          }
-          60% {
-            mix-blend-mode: soft-light;
-          }
-          70% {
-            mix-blend-mode: normal;
-          }
-          80% {
-            mix-blend-mode: soft-light;
-          }
-          85% {
-            mix-blend-mode: normal;
-          }
-          90% {
-            mix-blend-mode: soft-light;
-          }
-          100% {
-            mix-blend-mode: normal;
-          }
-          
+    &::after {
+      position: absolute;
+      content: "";
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url("/img/Slide\ 16_9\ -\ 1.jpg");
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      animation: light 5s ease-in infinite;
+      @keyframes light {
+        0% {
+          mix-blend-mode: soft-light;
         }
+        10% {
+          mix-blend-mode: normal;
+        }
+        15% {
+          mix-blend-mode: soft-light;
+        }
+        40% {
+          mix-blend-mode: normal;
+        }
+        60% {
+          mix-blend-mode: soft-light;
+        }
+        70% {
+          mix-blend-mode: normal;
+        }
+        80% {
+          mix-blend-mode: soft-light;
+        }
+        85% {
+          mix-blend-mode: normal;
+        }
+        90% {
+          mix-blend-mode: soft-light;
+        }
+        100% {
+          mix-blend-mode: normal;
+        }
+          
       }
+    }
       &__name {
         margin: 16px;
         font-size: var(--big-xll);
@@ -524,7 +521,7 @@ section {
   position: relative;
 
   &__list {
-    &--li {
+    &--element {
       display: flex;
       align-items: center;
       .icon {
@@ -550,7 +547,7 @@ section {
     width: 100%;
     height: 100%;
     overflow: hidden;
-    li {
+    span {
       position: absolute;
       display: block;
       list-style: none;
@@ -632,7 +629,7 @@ section {
 .footer {
   height: 40px;
   background-color: #151414;
-  &__h2 {
+  &__title {
     text-align: center;
     line-height: 40px;
     font-size: var(--small);

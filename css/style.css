@@ -13,6 +13,7 @@
   --medium: 14px;
   --small: 10px;
   --white: #F2F2F2;
+  --black: #020202;
   --grey: #989898;
   --grey-dark: #3C3939;
   --blue: #58A7C0;
@@ -125,11 +126,6 @@ a, a:hover, a:focus, a:active {
   z-index: 999;
 }
 
-.wrapper .hamburger:focus > .hamburger__container {
-  -webkit-box-shadow: 0 0 3px 3px #51a7e8;
-          box-shadow: 0 0 3px 3px #51a7e8;
-}
-
 .wrapper .hamburger__container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -226,20 +222,20 @@ a, a:hover, a:focus, a:active {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  background-color: #262424;
   overflow: hidden;
 }
 
-.header__picture {
+.header::after {
   position: absolute;
+  content: "";
   top: 0;
-  right: 0;
-  width: auto;
-  height: 100vh;
-  border-radius: 5px;
-  opacity: .7;
-  -webkit-transform: translateX(5%);
-          transform: translateX(5%);
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("/img/Slide 16_9 - 1.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
   -webkit-animation: light 5s ease-in infinite;
           animation: light 5s ease-in infinite;
 }
@@ -736,7 +732,7 @@ section:nth-child(4) .section__heading--bottom {
   position: relative;
 }
 
-.contact__list--li {
+.contact__list--element {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -745,7 +741,7 @@ section:nth-child(4) .section__heading--bottom {
           align-items: center;
 }
 
-.contact__list--li .icon {
+.contact__list--element .icon {
   width: 34px;
   line-height: 34px;
   text-align: center;
@@ -753,7 +749,7 @@ section:nth-child(4) .section__heading--bottom {
   font-size: var(--big);
 }
 
-.contact__list--li h2 {
+.contact__list--element h2 {
   margin: 8px;
   font-size: var(--medium);
 }
@@ -771,7 +767,7 @@ section:nth-child(4) .section__heading--bottom {
   overflow: hidden;
 }
 
-.contact .circles__animated li {
+.contact .circles__animated span {
   position: absolute;
   display: block;
   list-style: none;
@@ -781,7 +777,7 @@ section:nth-child(4) .section__heading--bottom {
           animation: spin-right 25s linear infinite;
 }
 
-.contact .circles__animated li:nth-child(1) {
+.contact .circles__animated span:nth-child(1) {
   top: 60%;
   left: -55px;
   width: 120px;
@@ -790,7 +786,7 @@ section:nth-child(4) .section__heading--bottom {
           animation: slide 12s 3s linear infinite;
 }
 
-.contact .circles__animated li:nth-child(2) {
+.contact .circles__animated span:nth-child(2) {
   top: 10%;
   right: -30px;
   width: 80px;
@@ -799,7 +795,7 @@ section:nth-child(4) .section__heading--bottom {
           animation: slide 12s linear infinite;
 }
 
-.contact .circles__animated li:nth-child(3) {
+.contact .circles__animated span:nth-child(3) {
   top: 85%;
   left: 65%;
   width: 70px;
@@ -808,7 +804,7 @@ section:nth-child(4) .section__heading--bottom {
           animation: spin-right 12s linear infinite;
 }
 
-.contact .circles__animated li:nth-child(3)::after {
+.contact .circles__animated span:nth-child(3)::after {
   position: absolute;
   top: -50px;
   left: 0;
@@ -819,7 +815,7 @@ section:nth-child(4) .section__heading--bottom {
   height: 20px;
 }
 
-.contact .circles__animated li:nth-child(4) {
+.contact .circles__animated span:nth-child(4) {
   top: 85%;
   left: 65%;
   width: 70px;
@@ -828,7 +824,7 @@ section:nth-child(4) .section__heading--bottom {
           animation: spin-right 8s linear infinite;
 }
 
-.contact .circles__animated li:nth-child(4)::after {
+.contact .circles__animated span:nth-child(4)::after {
   position: absolute;
   top: -20px;
   left: 15px;
@@ -896,7 +892,7 @@ section:nth-child(4) .section__heading--bottom {
   background-color: #151414;
 }
 
-.footer__h2 {
+.footer__title {
   text-align: center;
   line-height: 40px;
   font-size: var(--small);
