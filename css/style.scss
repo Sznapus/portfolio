@@ -9,10 +9,10 @@
 
 :root {
   scroll-behavior: smooth;
-    --big-xll: 36px;
-    --big: 24px;
-    --medium: 14px;
-    --small: 10px;
+    --big-xll: 2em;
+    --big: 1.6em;
+    --medium: 1em;
+    --small: 0.6em;
     --white: #F2F2F2;
     --black: #020202;
     --grey: #989898;
@@ -295,21 +295,98 @@ section {
 .about {
   background-color: var(--white);
   position: relative;
-  width: 100vw;
-  height:100vh;
   overflow: hidden;
-  &__text {
-    width: 80%;
-    text-align: left;
-    padding: 8px 16px;
-    font-size: var(--medium);
-    background-color: #fff;
-    color: var(--grey-dark);
-    z-index: 1;
-    &:nth-child(odd) {
-      margin: 32px 0 0 0;
+  // &__text {
+  //   width: 80%;
+  //   text-align: left;
+  //   margin: 0 0 32px 0;
+  //   padding: 8px 16px;
+  //   font-size: var(--medium);
+  //   background-color: #fff;
+  //   color: var(--grey-dark);
+  //   box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+  //   z-index: 1;
+  // }
+
+
+
+
+  .snip1206 {
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+    margin: 10px;
+    min-width: 220px;
+    max-width: 310px;
+    max-height: 220px;
+    width: 100%;
+    color: #000000;
+    text-align: center;
+    transition: all 0.6s ease;
+    &::after {
+      background: #ffffff;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      content: '';
+      opacity: 0.75;
+      transform: skew(-45deg) scaleX(0);
+      transition: all 0.3s ease-in-out;
     }
+    img {
+      opacity: 1;
+      width: 100%;
+      -webkit-transition: opacity 0.35s;
+      transition: opacity 0.35s;
+    }
+    figcaption {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      width: 100%;
+      transform: translateY(-50%);
+      z-index: 1;
+    }
+    h2,
+    p {
+      margin: 0;
+      width: 100%;
+      opacity: 0;
+    }
+    h2 {
+      padding: 0 30px;
+      display: inline-block;
+      font-weight: 400;
+      text-transform: uppercase;
+    }
+    p {
+      padding: 0 50px;
+      font-size: 0.8em;
+      font-weight: 500;
+    }
+    &:hover::after{
+      transform: skew(-45deg) scaleX(1);
+      transition: all 400ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+    &:hover figcaption h2,
+    &:hover figcaption p {
+    transform: translate3d(0%, 0%, 0);
+    transition-delay: 0.2s;
   }
+  &:hover figcaption h2 {
+    opacity: 1;
+  }
+  &:hover figcaption p {
+    opacity: 1;
+  }
+  }
+
+
+
+
+
   .squares {
       position: absolute;
       top: 0;
@@ -423,12 +500,6 @@ section {
       ". . . ."; 
       margin: 0 0 48px 0;
     }
-    // display: flex;
-    // flex-wrap: wrap;
-    // justify-content: space-around;
-    // align-items: center;
-    // margin: 0 48px;
-    // z-index: 1;
     &--item {
       display: flex;
       flex-direction: column;
