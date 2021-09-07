@@ -182,7 +182,7 @@ a, a:hover, a:focus, a:active {
       left: 0;
       width: 100%;
       height: 100%;
-      background-image: url("./img/bulb.jpg");
+      background-image: url(/img/bulb.jpg);
       background-position: center;
       background-size: cover;
       background-repeat: no-repeat;
@@ -307,20 +307,19 @@ section {
   overflow: hidden;
   padding: 0 10px;
   &__content {
-    color: #fff;
+    color: var(--white);
     position: relative;
     overflow: hidden;
     margin: 10px;
     min-width: 220px;
-    max-width: 610px;
-    max-height: 420px;
+    max-width: 310px;
+    max-height: 220px;
     width: 100%;
     color: #000000;
     text-align: center;
     transition: all 0.6s ease;
     &::after {
       background: var(--white);
-      opacity: 0.9;
       width: 100%;
       height: 100%;
       position: absolute;
@@ -610,25 +609,41 @@ section {
 .contact {
   justify-content: flex-start;
   position: relative;
-
-  &__list {
-    &--element {
-      display: flex;
+  &__container {
+    display: flex;
+    margin: 32px 0;
+    justify-content: space-around;
+    width: 70%;
+    height: 70vh;
+    z-index: 1;
+    @media (min-width: 960px) {
+      justify-content: flex-start;
       align-items: center;
-      .icon {
-        width: 34px;
-        line-height: 34px;
-        text-align: center;
-        margin: 8px;
-        font-size: var(--big);
-      }
-      h2 {
-        margin: 8px;
-        font-size: var(--medium);
-      }
     }
-    &--li:nth-of-type(1) {
-      margin: 64px 0 0 0;
+    @media (orientation: landscape) {
+      margin: 0 0;
+      justify-content: flex-start;
+    }
+    .contact__list {
+      &--element {
+        display: flex;
+        align-items: center;
+        .icon {
+          width: 34px;
+          line-height: 34px;
+          text-align: center;
+          margin: 8px;
+          font-size: var(--big);
+          justify-content: space-around;
+        }
+        h2 {
+          margin: 8px;
+          font-size: var(--medium);
+        }
+      }
+      &--li:nth-of-type(1) {
+        margin: 64px 0 0 0;
+      }
     }
   }
   .circles__animated {
@@ -643,6 +658,7 @@ section {
       display: block;
       list-style: none;
       border: 3px solid var(--grey);
+      opacity: .5;
       border-radius: 50%;
       animation: spin-right 25s linear infinite; 
         &:nth-child(1) {
@@ -660,7 +676,7 @@ section {
           animation: slide 12s linear infinite;
         }
         &:nth-child(3) {
-          top: 85%;
+          top: 75%;
           left: 65%;
           width: 70px;
           height: 70px;
@@ -677,7 +693,7 @@ section {
           }
         } 
           &:nth-child(4) {
-            top: 85%;
+            top: 75%;
             left: 65%;
             width: 70px;
             height: 70px;
