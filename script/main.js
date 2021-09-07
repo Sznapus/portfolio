@@ -13,3 +13,5 @@ menu.addEventListener('click', () => {
   }); 
 });
 
+ScrollReveal({ reset: true }).reveal('.headline', {delay: 100});
+
