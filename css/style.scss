@@ -82,9 +82,9 @@ a, a:hover, a:focus, a:active {
           &-link {
             padding: 0 8px;
             font-size: var(--medium);
-            transition: .3s linear;
+            transition: .1s linear;
             &:hover {
-              color: var(--blue);
+              text-shadow: 0 0 2px var(--white);
             }
             @media (min-width: 960px) {
               font-size: var(--big);
@@ -227,7 +227,6 @@ a, a:hover, a:focus, a:active {
         writing-mode: vertical-rl;
         z-index: 1;
         letter-spacing: 0px;
-        cursor: default;
       }
       &__work {
         align-self: center;
@@ -380,6 +379,7 @@ section {
   
 .technologies {
   position: relative;
+  justify-content: center;
   &__container {
     display: grid; 
     grid-template-columns: 1fr 1fr; 
@@ -405,8 +405,8 @@ section {
       justify-content: space-around;
       align-items: center;
       margin: 8px;
-      width: 21vw;
-      height: 21vw;
+      width: 20vw;
+      height: 20vw;
       border-radius: 5px;
       background-color: var(--blue-dark);
       transition: .3s linear;
@@ -415,6 +415,8 @@ section {
       }
       @media (min-width: 960px) {
         background-color: rgba(0, 0, 0, 0);
+        width: 10vw;
+        height: 10vw;
       }
       @media (orientation: landscape) {
         width: 12vw;
@@ -534,6 +536,10 @@ section {
     width: 90%;
     height: 40%;
     box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+    @media (min-width: 800px) {
+      width: 70%;
+      height: 30%;
+    }
     &:nth-child(odd) {
       .projects__article--heading {
       align-self: flex-end;
@@ -581,6 +587,13 @@ section {
             width: 100%;
             text-align: center;
             color: var(--blue-dark);
+            transition: 0.1s linear;
+            @media (min-width: 960px) {
+              &:hover {
+                transform: scale(1.1);
+                text-shadow: 0 0 1px var(--blue-dark);
+              }
+            }
           }
           i {
             margin: 8px 8px;
@@ -607,8 +620,8 @@ section {
 }
 
 .contact {
-  justify-content: flex-start;
   position: relative;
+  justify-content: center;
   &__container {
     display: flex;
     flex-direction: column;
@@ -616,16 +629,7 @@ section {
     justify-content: space-between;
     margin: 32px 0;
     width: 70%;
-    min-height: 70vh;
     z-index: 1;
-    // @media (min-width: 960px) {
-    //   justify-content: flex-start;
-    //   align-items: center;
-    // }
-    // @media (orientation: landscape) {
-    //   margin: 0 0;
-    //   justify-content: flex-start;
-    // }
     .contact__list {
       &--element {
         display: flex;
@@ -647,16 +651,6 @@ section {
         margin: 64px 0 0 0;
       }
     }
-    // .contact__img {
-    //   width: 120px;
-    //   height: 120px;
-    //   img {
-    //     width: 100%;
-    //     height: auto;
-    //     mix-blend-mode: luminosity;
-    //     box-shadow: 2px 2px 0 var(--white);
-    //   }
-    // }
   }
   .circles__animated {
     position: absolute;
