@@ -559,8 +559,6 @@ section:nth-child(4) .section__heading--bottom {
 @media (min-width: 960px) {
   .technologies__container--item {
     background-color: rgba(0, 0, 0, 0);
-    width: 10vw;
-    height: 10vw;
   }
 }
 
