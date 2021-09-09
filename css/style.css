@@ -548,6 +548,13 @@ section:nth-child(4) .section__heading--bottom {
   opacity: 1;
 }
 
+@media (min-width: 960px) {
+  .about__content {
+    max-width: 620px;
+    max-height: 440px;
+  }
+}
+
 .technologies {
   position: relative;
   -webkit-box-pack: center;
