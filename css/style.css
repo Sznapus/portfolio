@@ -32,6 +32,10 @@ h2 {
   font-weight: normal;
 }
 
+h3 {
+  font-weight: normal;
+}
+
 .parent-size {
   width: 100vw;
   min-height: 100vh;
@@ -63,7 +67,7 @@ a, a:hover, a:focus, a:active {
 }
 
 .wrapper {
-  width: 100vw;
+  width: 100%;
   background: #151414;
   overflow: hidden;
 }
@@ -110,24 +114,64 @@ a, a:hover, a:focus, a:active {
 
 .wrapper .navigation__list--element-link {
   padding: 0 8px;
-  font-size: var(--medium);
-  -webkit-transition: .1s linear;
-  transition: .1s linear;
-}
-
-.wrapper .navigation__list--element-link:hover {
-  text-shadow: 0 0 2px var(--white);
+  font-size: var(--big);
 }
 
 @media (min-width: 960px) {
+  .wrapper .navigation {
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    -webkit-transform: translate(0);
+            transform: translate(0);
+    background-color: transparent;
+    position: fixed;
+    top: 0;
+    right: 0;
+    padding: 0 0;
+    height: 8vh;
+    overflow: hidden;
+  }
+  .wrapper .navigation__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    width: 60%;
+    height: 100%;
+    background-color: #020202;
+    border-radius: 0 0 0 30px;
+  }
+  .wrapper .navigation__list--element {
+    display: block;
+    width: auto;
+  }
   .wrapper .navigation__list--element-link {
-    font-size: var(--big);
+    padding: 0 4px;
+    margin: 0 16px;
+    border-radius: 5px;
+    background-color: #020202;
+    -webkit-transition: .3s linear;
+    transition: .3s linear;
+  }
+  .wrapper .navigation__list--element-link:hover {
+    background-color: var(--white);
+    color: #020202;
   }
 }
 
 .wrapper .navigation.active {
   -webkit-transform: translate(0);
           transform: translate(0);
+}
+
+@media (min-width: 960px) {
+  .wrapper .navigation.active {
+    display: none;
+  }
 }
 
 .wrapper .hamburger {
@@ -141,6 +185,12 @@ a, a:hover, a:focus, a:active {
   background-color: transparent;
   cursor: pointer;
   z-index: 999;
+}
+
+@media (min-width: 960px) {
+  .wrapper .hamburger {
+    display: none;
+  }
 }
 
 .wrapper .hamburger__container {
@@ -582,8 +632,8 @@ section:nth-child(4) .section__heading--bottom {
 }
 
 .technologies__container--item .technologies__img {
-  width: 50%;
-  height: auto;
+  width: auto;
+  height: 50%;
 }
 
 .technologies .squares {

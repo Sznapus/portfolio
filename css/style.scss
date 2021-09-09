@@ -31,6 +31,9 @@
 h2 {
   font-weight: normal;
 }
+h3 {
+  font-weight: normal;
+}
 
 .parent-size {
     width: 100vw;
@@ -55,7 +58,7 @@ a, a:hover, a:focus, a:active {
 }
 
 .wrapper {
-  width: 100vw;
+  width: 100%;
   background: #151414;
   overflow: hidden;
   .navigation {
@@ -81,13 +84,42 @@ a, a:hover, a:focus, a:active {
           width: 100%;
           &-link {
             padding: 0 8px;
-            font-size: var(--medium);
-            transition: .1s linear;
-            &:hover {
-              text-shadow: 0 0 2px var(--white);
-            }
-            @media (min-width: 960px) {
-              font-size: var(--big);
+            font-size: var(--big);
+          }
+        }
+      }
+      @media (min-width: 960px) {
+        justify-content: flex-end;
+        transform: translate(0);
+        background-color: transparent;
+        position: fixed;
+        top: 0;
+        right: 0;
+        padding: 0 0;
+        height: 8vh; 
+        overflow: hidden;     
+        &__list{
+          display: flex;
+          flex-direction: row;
+          // justify-content: flex-end;
+          // align-items: center;
+          width: 60%;
+          height: 100%;
+          background-color: #020202;
+          border-radius: 0 0 0 30px;
+          &--element {
+            display: block;
+            width: auto;
+            &-link {
+              padding: 0 4px;
+              margin: 0 16px;
+              border-radius: 5px;
+              background-color: #020202;
+              transition: .3s linear;
+              &:hover {
+                background-color: var(--white);
+                color: #020202;
+              }
             }
           }
         }
@@ -95,6 +127,9 @@ a, a:hover, a:focus, a:active {
   }
   .navigation.active{
     transform: translate(0);
+    @media (min-width: 960px) {
+      display: none;
+    } 
   }
   .hamburger {
     display: block;
@@ -107,6 +142,9 @@ a, a:hover, a:focus, a:active {
     background-color: transparent;
     cursor: pointer;
     z-index: 999;
+    @media (min-width: 960px) {
+      display: none;
+    } 
   }
   
   .hamburger__container {
@@ -430,8 +468,8 @@ section {
         transition: .3s linear;
       }
       .technologies__img {
-        width: 50%;
-        height: auto;
+        width: auto;
+        height: 50%;
       }       
     }
   }
