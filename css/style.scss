@@ -12,7 +12,7 @@
     --big-xll: 2em;
     --big: 1.6em;
     --medium: 1em;
-    --small: 0.6em;
+    --small: 0.7em;
     --white: #F2F2F2;
     --black: #151414;
     --grey: #989898;
@@ -102,20 +102,20 @@ a, a:hover, a:focus, a:active {
           justify-content: flex-end;
           width: 100%;
           height: 100%;
+          background-color: var(--white);
           &--element {
             display: block;
             width: auto;
             &-link {
               padding: 4px 8px;
               border-radius: 5px;
-              background-color: #020202;
+              color: #020202;
               font-size: var(--normal);
               transform: translateY(200px);
               transition: .3s linear;
               &:hover {
-                transform: translateY(200px);
-                background-color: var(--white);
-                color: #020202;
+                background-color: #020202;
+                color: var(--white);
               }
             }
           }
@@ -258,15 +258,23 @@ a, a:hover, a:focus, a:active {
       }
     }
       &__name {
-        margin: 12px 16px;
+        position: absolute;
+        top: 0;
+        left: 2%;
+        height: 100%;
+        text-align: center;
         font-size: var(--big-xll);
         writing-mode: vertical-rl;
         z-index: 1;
-        letter-spacing: 0px;
+        letter-spacing: 2px;
       }
       &__work {
-        align-self: center;
-        margin: 0 0 48px 0;
+        position: absolute;
+        bottom: 5%;
+        left: 0;
+        width: 100%;
+        font-size: var(--big);
+        text-align: center;
         z-index: 1;
       }
   }
@@ -341,17 +349,18 @@ section {
   position: relative;
   overflow: hidden;
   padding: 0 10px;
+  @media (min-width: 1366px) {
+   //Dodac row!!!
+  }
   &__content {
-    color: var(--white);
     position: relative;
-    overflow: hidden;
     margin: 10px;
     min-width: 220px;
     max-width: 310px;
     max-height: 220px;
     width: 100%;
-    color: #000000;
     text-align: center;
+    overflow: hidden;
     transition: all 0.6s ease;
     &::after {
       background: var(--white);
@@ -362,54 +371,38 @@ section {
       left: 0;
       bottom: 0;
       content: '';
-      transform: skew(-45deg) scaleX(0);
-      transition: all 0.3s ease-in-out;
+      transform: skew(-45deg);
+      transition: all 0.5s ease-in-out;
     }
     img {
-      opacity: 1;
       width: 100%;
-      transition: opacity 0.35s;
     }
     &--text {
       position: absolute;
       top: 50%;
-      left: 0;
-      width: 100%;
-      transform: translateY(-50%);
+      left: 50%;
+      width: 95%;
+      transform: translate(-50%, -50%);
       z-index: 1;
     }
     h2,
     p {
       margin: 0;
       width: 100%;
-      opacity: 0;
+      color: black;
     }
     h2 {
       padding: 0 30px;
       display: inline-block;
-      font-weight: 400;
       text-transform: uppercase;
     }
     p {
       padding: 0 50px;
-      font-size: 0.8em;
-      font-weight: 500;
+      font-size: var(--small);
     }
     &:hover::after{
-      transform: skew(-45deg) scaleX(1.1);
-      transition: all 400ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      transform: skew(-225deg);
     }
-    &:hover .about__content--text h2,
-    &:hover .about__content--text p {
-    transform: translate3d(0, 0, 0);
-    transition-delay: 0.2s;
-  }
-  &:hover .about__content--text h2 {
-    opacity: 1;
-  }
-  &:hover .about__content--text p {
-    opacity: 1;
-  }
   }
   @media (min-width: 960px) {
     &__content {
@@ -583,6 +576,10 @@ section {
     @media (min-width: 800px) {
       width: 70%;
       height: 30%;
+    }
+    @media (min-width: 1366px) {
+      //ewentualnie!!
+      //flex direction row! 3 obok siebie
     }
     &:nth-child(odd) {
       .projects__article--heading {
