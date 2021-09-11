@@ -597,12 +597,15 @@ section:nth-child(4) .section__heading--bottom {
 }
 
 .technologies__container--item:hover p {
-  color: var(--white);
+  opacity: 1;
 }
 
 @media (min-width: 960px) {
   .technologies__container--item {
     background-color: rgba(0, 0, 0, 0);
+  }
+  .technologies__container--item p {
+    opacity: 0;
   }
 }
 
@@ -616,7 +619,7 @@ section:nth-child(4) .section__heading--bottom {
 .technologies__container--item p {
   font-size: var(--small);
   font-weight: bold;
-  color: var(--black);
+  color: var(--white);
   -webkit-transition: .3s linear;
   transition: .3s linear;
 }

@@ -449,10 +449,13 @@ section {
         background-color: var(--blue-dark);
       }
       &:hover p {
-        color: var(--white);
+        opacity: 1;
       }
       @media (min-width: 960px) {
         background-color: rgba(0, 0, 0, 0);
+        p {
+          opacity: 0;
+        }
       }
       @media (orientation: landscape) {
         width: 12vw;
@@ -461,7 +464,7 @@ section {
       p {
         font-size: var(--small);
         font-weight: bold;
-        color: var(--black);
+        color: var(--white);
         transition: .3s linear;
       }
       .technologies__img {
